@@ -91,7 +91,7 @@ const tokenRenew = async (req, res = response) => {
 	//Generate new token
 	const token = await generateJWT(uid, name);
 
-	res.json({ ok: true, token });
+	res.json({ ok: true, token, uid, name });
 };
 
 module.exports = {
